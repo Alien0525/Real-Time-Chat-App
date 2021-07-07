@@ -9,10 +9,15 @@ const router = require('./router');
 
 const app = express();
 const server = http.createServer(app);
-const io = socketio(server);
+corsOptions={
+  cors: true,
+  origin:'*',
+ }
+ const io = socketio(server, corsOptions);
 
 app.use(cors());
 app.use(router);
+
 
 io.on('connect', (socket) => {
   socket.on('join', ({ name, room }, callback) => {
