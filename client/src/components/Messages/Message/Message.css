@@ -49,10 +49,10 @@
 .justifyEnd {
   justify-content: flex-end;
 }
-.justifyCenter {
+/* .justifyCenter {
   display: flex;
   justify-content: center;
-}
+} */
 
 .colorWhite {
   color: white;
@@ -65,9 +65,9 @@
 .backgroundBlue {
   background: #2979FF;
 }
-.backgroundBlack {
+/* .backgroundBlack {
   background: #414142;
-}
+} */
 
 .backgroundLight {
   background: #F3F3F3;

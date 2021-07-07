@@ -23,15 +23,15 @@ const Message = ({ message: { text, user }, name }) => {
           </div>
         </div>
         )
-        : user==='admin' ? 
-        (
-          <div className="messageContainer justifyCenter">
-            <p className="sentText pr-5 pl-5">{user}</p>
-            <div className="messageBox backgroundBlack">
-              <p className="messageText colorWhite">{ReactEmoji.emojify(text)}</p>
-            </div>
-          </div>
-        )
+        // : user==='admin' ? 
+        // (
+        //   <div className="messageContainer justifyCenter">
+        //     <p className="sentText pr-5 pl-5">{user}</p>
+        //     <div className="messageBox backgroundBlack">
+        //       <p className="messageText colorWhite">{ReactEmoji.emojify(text)}</p>
+        //     </div>
+        //   </div>
+        // )
         :(
           <div className="messageContainer justifyStart">
             <div className="messageBox backgroundLight">
