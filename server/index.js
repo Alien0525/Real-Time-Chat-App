@@ -9,13 +9,18 @@ const router = require('./router');
 
 const app = express();
 const server = http.createServer(app);
-corsOptions={
-  cors: true,
-  origin:'*',
- }
- const io = socketio(server, corsOptions);
 
-app.use(cors());
+app.use(cors({
+  origin: ["http://localhost:3000", 'https://react-realtime-chat-app-socket.herokuapp.com/'],// restrict calls to those this address
+  methods: "GET" // only allow GET requests
+}));
+
+// corsOptions={
+//   cors: true,
+//   origin: ['http://localhost:3000'],
+// }
+const io = socketio(server);
+
 app.use(router);
 
 
